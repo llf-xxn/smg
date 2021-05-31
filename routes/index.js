@@ -123,7 +123,7 @@ router.post('/index5',function(req,res){
   let body = req.body
   connection.query('UPDATE manage SET name = ? , price = ?,sale = ?,address =? WHERE id = ?',[body.name,body.price,body.sale,body.address,req.query.id],function(err,result){
     res.redirect('/index3') 
-     
+    
   })
 })
 
